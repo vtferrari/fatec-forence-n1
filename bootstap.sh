@@ -3,7 +3,9 @@ echo -n "Deseja instalar os headers do sistema (y/n)? "
 read answer
 if echo "$answer" | grep -iq "^y" ;then
    apt-get update
-   apt-get install linux-headers-amd64
+   apt-get install linux-headers-$(uname -r)
+   apt-get install gcc
+   apt-get install make-guile
 fi
 
 echo -n "Deseja instalar os liME (y/n)? "
