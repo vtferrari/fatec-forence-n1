@@ -13,8 +13,7 @@ if echo "$answer" | grep -iq "^y" ;then
    rm -rf ./LiME-master
    wget https://github.com/504ensicsLabs/LiME/archive/master.zip 
    unzip ./master.zip 
-   cd ./LiME-master/src/
-   make
+   make -C ./LiME-master/src/
 fi
 
 echo -n "Deseja extrair evidencias (y/n)? "
@@ -41,4 +40,3 @@ if echo "$answer" | grep -iq "^y" ;then
    md5sum ./forence/memlime.txt > ./forence/memlime.txt.md5
    sha256sum ./forence/memlime.txt > ./forence/memlime.txt.sha256
 fi
-
